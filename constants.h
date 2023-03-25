@@ -1,4 +1,5 @@
-
+//FILENAME:constants.h
+//PURPOSE: This file contains all of the constants for our motor, servo and sensor definitions and position.
 //MOTOR DEFINITIONS
 #define LM 3
 #define RM 0
