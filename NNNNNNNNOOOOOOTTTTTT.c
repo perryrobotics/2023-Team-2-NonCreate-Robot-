@@ -4,9 +4,9 @@
 #include "constants.h"
 #include "sensors.h"
 #include "effectors.h"
+void forward(int speed,int ticks);
 
-
-int main()
+int main2()
 {
     int start_time;
     printf("Hello World\n");
@@ -16,7 +16,7 @@ int main()
     set_servo_position(LEFT_SCOOP_SERVO, LEFT_SCOOP_OPEN);
     out_line_up();
 
-    //wait_for_light(LIGHT);
+    wait_for_light(LIGHT);
 
     shut_down_in(119);
     start_time=time(NULL);
@@ -36,7 +36,7 @@ int main()
     forward(900, 1000);
     left(800,500);
     forward(8000,3200);
-    left(750,350);
+    left(750,450);
     
     //DRIFT
     motor(LM,45);
@@ -49,7 +49,7 @@ int main()
     motor(RM,0);
     out_line_up();
     msleep(100);
-    right(750,610);
+    right(750,600);
     forward_to_black(1000, FRONT_LINE); 
     
     // WE ARE AT THE CENTER BLACK LINE
@@ -79,7 +79,7 @@ int main()
     right(1000,750);
     
     //KNOCK RED POMS
-    left_to_black(1500,FRONT_LINE);
+    left_to_black(1000,FRONT_LINE);
     forward(2100,2600);
     right(350,530);
     forward(1000,700);
@@ -91,22 +91,20 @@ int main()
     left(1000,500);
     forward(1000,1000);
     left(1000,2250);
-    forward_to_black(1500, FRONT_LINE);
+    forward_to_black(1000, FRONT_LINE);
     forward(1000,2000);
     
     //2 red poms delivered
-    backward(1000,6750);
-    
-    left(1000,625);
-    backward(1500, 200);
-    forward(1000,2167);
+    backward(1000,6250);
+    left(1000,830);
+    forward(1000,1486);
     
     //ON POM PILE
     set_servo_position(LEFT_SCOOP_SERVO, LEFT_SCOOP_CLOSED);
     forward(1000, 670);
     msleep(1000); 
     forward(1000,2000);
-    right(1000,1100);
+    right(1000,1200);
     forward_to_black(1000, FRONT_LINE);	
     forward(1500, 3200);
     

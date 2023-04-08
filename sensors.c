@@ -96,7 +96,7 @@ void line_follow_ticks(int speed, int port, int ticks)
             // over white
             printf("I SEE WHITE!!!!\n");
             mav(LM, speed);
-            mav(RM, speed+50);
+            mav(RM, speed+75);
         }
         else
         {
